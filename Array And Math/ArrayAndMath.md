@@ -11,4 +11,17 @@ Same in B,
 
 time complexity = m,    m=maxRangeLength
 
-Converting ![asdf](https://render.githubusercontent.com/render/math?math=A{\rightarrow}B)
+Algorithm to convert ![asdf](https://render.githubusercontent.com/render/math?math=A{\rightarrow}B),
+1. Sort using this function,
+  ```
+  func cmp(a, b) {
+    if(a[0] < b[0])
+      return true;
+    if(a[0] > b[0])
+      return false;
+    if(a[1] < b[1])
+      return true;
+    return false;
+  }
+  ```
+2. Result array will contain sorted overlapping ranges. Now we have to merge/divide overlapping ranges. Final array will contain sorted non-overlapping ranges.
