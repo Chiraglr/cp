@@ -51,11 +51,50 @@ If such a bar exists, then we can simplify problem. For array A if bar is at ind
 
 total rain trapped = rain trapped b/w leftmost wall and bar![asdf](https://render.githubusercontent.com/render/math?math={%2B}) rain trapped in A[r ... ]
 
-rain trapped b/w leftmost wall and bar = sum of (leftmost wall height - H),![asdf](https://render.githubusercontent.com/render/math?math={\forall}H) from leftmost wall to the bar;
+rain trapped b/w leftmost wall and bar = sum of (leftmost wall height - H), ![asdf](https://render.githubusercontent.com/render/math?math={\forall}H) from leftmost wall to the bar;
 
-3. From the leftmost wall, how to find it's right wall till where water is trapped? In the example it is bar 5 for the leftmost wall.
-So the right wall for the leftmost wall is the bar on it's right which is the closest tallest wall whose height is ![asdf](https://render.githubusercontent.com/render/math?math={\le}) height of the leftmost wall. Even if we get bar with height ![asdf](https://render.githubusercontent.com/render/math?math={>}) leftmost wall, water level will not be greater than leftmost wall as it will drain off into infinite drain.
+![image](https://user-images.githubusercontent.com/29271117/143490392-ce492ee8-6d14-4a41-b75a-1bee5e3ff70f.png)
 
+after rain is filled b/w them, then the rain trapped is like a bar. On treating the trapped rain as a bar, we will get a new leftmost block. Hence the above equations are valid.
+
+3. let l = height of leftmost wall,
+let w = [ l ];
+
+let's iterate from the leftmost wall till we find a bar satisfying 2nd property. For each sequence that is increasing,
+
+i) find the tallest bar in the sequence,
+
+ii) if bar is not taller then last element of w, then push it's index. Else keep popping elements in w from last till an element![asdf](https://render.githubusercontent.com/render/math?math={>})height of current bar is found, then push it's index. Do this till bar satisfying 2nd property is found. In final array, there is water trapped between consecutive bars in the array so we can calculate.
+
+Applying above properties, following is the algo,
+ popping elements from last and pushing to last means stack should be used.
+ 
+ ```
+ var l = index of leftmost wall;
+ var i = l + 1;
+ var result = 0;
+ stack b = [ l ];
+ while(i < A.length) {
+   while(i < A.length && A[i] <= A[i-1])
+     i++;
+   if(i==A.length)
+     break;
+   while(i < A.length && A[i] >= A[i-1])
+     i++;
+   i--;
+   while(b.length > 1 && b[b.length -1] <= A[i]) {
+     b.pop();
+   }
+   b.push(i);
+   if(A[i] >= b[0]) {
+     result += getRainTrapped(b, A);
+     l = i;
+     b = [ l ];
+   }
+   i++;
+ }
+ result += getRainTrapped(b, A);
+ ```
 
 
 
