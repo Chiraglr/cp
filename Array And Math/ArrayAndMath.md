@@ -46,7 +46,7 @@ So the right wall for the leftmost wall is the bar on it's right which is the cl
 
 3. After finding Right wall for the leftmost wall, we can simplify problem. For array A if right wall for leftmost wall is at index r, then
 
-    ![asdf](https://render.githubusercontent.com/render/math?math={total rain trapped = rain trapped b/w leftmost and right wall%2Brain trapped in A[r ... ]})
+    ![asdf](https://render.githubusercontent.com/render/math?math={(total rain trapped = rain trapped b/w leftmost and right wall)%2B(rain trapped in A[r ... ])})
 
 
 
