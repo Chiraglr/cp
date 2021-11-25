@@ -29,4 +29,4 @@ Algorithm to convert ![asdf](https://render.githubusercontent.com/render/math?ma
 
 time complexity is ![asdf](https://render.githubusercontent.com/render/math?math={\mathcal{O}(n\log{}n)}) ,
 
-Finally time complexity to convert and iterate over ranges is ![asdf](https://render.githubusercontent.com/render/math?math={\large \mathcal{O}(n\log{}n)%2Bm})
+Finally time complexity to convert and iterate over ranges is ![asdf](https://render.githubusercontent.com/render/math?math=\large {\mathcal{O}(n\log{}n)%2Bm})
