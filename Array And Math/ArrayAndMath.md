@@ -43,3 +43,11 @@ First step is to figure out properties of rain:
 
 2. From the leftmost wall, how to find it's right wall till where water is trapped? In the example it is bar 5 for the leftmost wall.
 So the right wall for the leftmost wall is the bar on it's right which is the closest tallest wall whose height is ![asdf](https://render.githubusercontent.com/render/math?math={\le}) height of the leftmost wall. Even if we get bar with height ![asdf](https://render.githubusercontent.com/render/math?math={>}) leftmost wall, water level will not be greater than leftmost wall as it will drain off into infinite drain.
+
+3. After finding Right wall for the leftmost wall, we can simplify problem. For array A if right wall for leftmost wall is at index r, then
+
+    ![asdf](https://render.githubusercontent.com/render/math?math=total rain trapped = rain trapped b/w leftmost and right wall{%2B}rain trapped in A[r ... ])
+
+
+
+
