@@ -1,4 +1,4 @@
-### Array of Overlapping Ranges
+### 1. Array of Overlapping Ranges
 
 Array A = [[1, 10], [5, 20], [7, 9], [23, 40]];         Array B = [[1, 10], [11, 20], [23, 40]];
 
