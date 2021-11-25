@@ -42,7 +42,7 @@ First step is to figure out properties of rain:
 <img width="1065" alt="Screenshot 2021-11-25 at 9 29 37 PM" src="https://user-images.githubusercontent.com/29271117/143472771-1a6a24af-e232-4806-9ffa-74092ce29900.png">
 
 2. The first wall after the leftmost wall satisfying conditions
-i) height ![asdf](https://render.githubusercontent.com/render/math?math={\ge}) leftmost wall
+i) height ![asdf](https://render.githubusercontent.com/render/math?math={height\geleftmost wall}) leftmost wall
 ii) height ![asdf](https://render.githubusercontent.com/render/math?math={>}) height of bar to it's left
 
 If such a bar exists, then we can simplify problem. For array A if bar is at index r, then
