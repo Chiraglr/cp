@@ -51,7 +51,7 @@ If such a bar exists, then we can simplify problem. For array A if bar is at ind
 
 total rain trapped = rain trapped b/w leftmost wall and bar ![asdf](https://render.githubusercontent.com/render/math?math={%2B}) rain trapped in A[r ... ]
 
-rain trapped b/w leftmost wall and bar = sum of (leftmost wall height - H), ![asdf](https://render.githubusercontent.com/render/math?math={\forall H})from leftmost wall to the bar;
+rain trapped b/w leftmost wall and bar = sum of (leftmost wall height - H), ![asdf](https://render.githubusercontent.com/render/math?math={\forall}H)from leftmost wall to the bar;
 
 3. From the leftmost wall, how to find it's right wall till where water is trapped? In the example it is bar 5 for the leftmost wall.
 So the right wall for the leftmost wall is the bar on it's right which is the closest tallest wall whose height is ![asdf](https://render.githubusercontent.com/render/math?math={\le}) height of the leftmost wall. Even if we get bar with height ![asdf](https://render.githubusercontent.com/render/math?math={>}) leftmost wall, water level will not be greater than leftmost wall as it will drain off into infinite drain.
