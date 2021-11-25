@@ -26,3 +26,5 @@ Algorithm to convert ![asdf](https://render.githubusercontent.com/render/math?ma
   }
   ```
 2. Result array will contain sorted overlapping ranges. Now we have to merge/divide overlapping ranges. Final array will contain sorted non-overlapping ranges.
+
+time complexity is ![asdf](https://render.githubusercontent.com/render/math?math={\mathcal{O}(n\log{}n)}),
