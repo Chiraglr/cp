@@ -11,4 +11,4 @@ Same in B,
 
 time complexity = m,    m=maxRangeLength
 
-Converting![asdf](https://render.githubusercontent.com/render/math?math=A{\rightarrow}B)
+Converting ![asdf](https://render.githubusercontent.com/render/math?math=A{\rightarrow}B)
