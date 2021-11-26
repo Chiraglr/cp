@@ -104,26 +104,22 @@ Return the maximum value of f(i, j) for all 1 ≤ i, j ≤ N. f(i, j) is defined
 
 property: Say elements giving max value for f is at i,j index. Say A[i] > A[j] and i < j . We need to create an array rightMin where rightMin[x] gives the best element from x .. A.length which will give max val for f, given an appropriate point in 0 .. x-1. We create this array be starting from end of A and going left. As we go left, distance that is |i - j| will reduce so an element is considered better than last element of A if it's value is atleast lesser by the distance from end of A + 1. If we find that value we keep updating in rightMin else we use the previous. Similarly we create a leftMax. Using rightMin and leftMax we can get the max value of f where the left point is greater than the left one. We have to do similarly to get points where left point is less than the right one. We can then get the higher of the 2.
 
+### 4. Maximum Consecutive Gap
 
+Given an unsorted integer array A of size N.
+Find the maximum difference between the successive elements in its sorted form.
 
+property: min and max are the minimum and maximum elements of A respectively. Maximum Gap is possible when the only elements in A are min and max, so
 
+maxGap = max - min
 
+Also there are n elements, so the minimum possible gap is when the elements are evenly distributed, so
 
+minGap = (max - min) / (N - 1);
 
+So we should split elements into (N - 1) buckets with ranges [min, min + minGap], [min + minGap, min + 2*minGap], ... , [min + (N-2)*minGap, max];
+In each bucket we have to find minBucket and maxBucket.
 
+we know maxBucket - minBucket <= minGap. So no point searching inside a bucket. So naturally we have to search between buckets. Answer lies in comparing max of previous bucket with minBucket.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+principle: In unsorted array A of size N, maximum difference between successive elements in A's sorted form cannot be less than minGap. So let's bucket elements with gap = minGap so that we don't have to check inside a bucket for the maximum difference between elements.
