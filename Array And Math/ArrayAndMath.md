@@ -96,5 +96,34 @@ Applying above properties, following is the algo,
  result += getRainTrapped(b, A);
  ```
 
+### 3. Maximum Absolute Difference
+
+You are given an array of N integers, A1, A2, …. AN.
+
+Return the maximum value of f(i, j) for all 1 ≤ i, j ≤ N. f(i, j) is defined as |A[i] - A[j]| + |i - j|, where |x| denotes absolute value of x.
+
+property: Say elements giving max value for f is at i,j index. Say A[i] > A[j] and i < j . We need to create an array rightMin where rightMin[x] gives the best element from x .. A.length which will give max val for f, given an appropriate point in 0 .. x-1. We create this array be starting from end of A and going left. As we go left, distance that is |i - j| will reduce so an element is considered better than last element of A if it's value is atleast lesser by the distance from end of A + 1. If we find that value we keep updating in rightMin else we use the previous. Similarly we create a leftMax. Using rightMin and leftMax we can get the max value of f where the left point is greater than the left one. We have to do similarly to get points where left point is less than the right one. We can then get the higher of the 2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
