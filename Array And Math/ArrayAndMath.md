@@ -130,7 +130,17 @@ principle: Repeatedly remove x numbers from array. Numbers removed should be uni
 
 problems: i) You're given a read only array of n integers. Find out if any integer occurs more than n/3 times in the array.
 
+### 6. Get Minimum number of ranges from array of sorted ranges to cover entire range
 
+priniple: Let minRange be the start of the range. Find the range covering largest area and enclosing the minRange. The large area occupied will help to reduce count of ranges required. Next consider point just 1 greater than the range occupied by previous range. Find the next range covering the largest area of uncovered range and enclosing new point. Keep repeating till entire range is covered and keep count of ranges.
+
+problem: i) There is a corridor in a Jail which is N units long. Given an array A of size N. The ith index of this array is 0 if the light at ith position is faulty otherwise it is 1.
+
+All the lights are of specific power B which if is placed at position X, it can light the corridor from [ X-B+1, X+B-1].
+
+Initially all lights are off.
+
+Return the minimum number of lights to be turned ON to light the whole corridor or -1 if the whole corridor cannot be lighted.
 
 
 
