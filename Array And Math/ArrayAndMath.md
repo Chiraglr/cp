@@ -12,24 +12,7 @@ Same in B,
 
 time complexity = m,    m=maxRangeLength
 
-Algorithm to convert ![asdf](https://render.githubusercontent.com/render/math?math=A{\rightarrow}B),
-1. Sort using this function,
-  ```
-  func cmp(a, b) {
-    if(a[0] < b[0])
-      return true;
-    if(a[0] > b[0])
-      return false;
-    if(a[1] < b[1])
-      return true;
-    return false;
-  }
-  ```
-2. Result array will contain sorted overlapping ranges. Now we have to merge/divide overlapping ranges. Final array will contain sorted non-overlapping ranges.
-
-time complexity is ![asdf](https://render.githubusercontent.com/render/math?math={\mathcal{O}(n\log{}n)}) ,
-
-Finally time complexity to convert and iterate over ranges is ![asdf](https://render.githubusercontent.com/render/math?math={\mathcal{O}(n\log{}n)%2Bm})
+Instead of updating each point ranging from i to j, we could just update index i with +S and index j + 1 with -S, where S is value. So if you want to know value at position k, you just need to find prefix sum of all the values from 0 to k.
 
 ### 2. Rain Water Trapping
 
