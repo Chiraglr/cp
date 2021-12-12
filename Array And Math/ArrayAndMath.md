@@ -109,7 +109,7 @@ principle: In unsorted array A of size N, maximum difference between successive 
 
 ### 5. Repeating Number more than N/x of Array, for every x = 2, 3, 4, etc..
 
-principle: Repeatedly remove x numbers from array. Numbers removed should be unique for a single removal. Once we can't find x unique numbers for removal, then the number satisfying above condition will be in these numbers. So finally we have to iterate over original array and check.
+principle: Repeatedly remove x numbers from array. Numbers removed should be unique for a single removal. Once we can't find x unique numbers for removal, then the number satisfying above condition will be in these numbers. **So finally we have to iterate over original array and check.
 
 problems: i) You're given a read only array of n integers. Find out if any integer occurs more than n/3 times in the array.
 
