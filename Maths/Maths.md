@@ -1,6 +1,4 @@
-#Maths
-
-## Coprime
+### Coprime
 
 2 integers a & b are coprime if they don't have any common primes in their factorization.
 
