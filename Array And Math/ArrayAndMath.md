@@ -132,5 +132,3 @@ problem: Given an array A of integers, find the maximum of j - i subjected to th
 principle: If max is given by (i,j), then there cannot be a (x,y) where x>i, y>j and A[x]>=A[i] as then this gives rise to a new max (i,y) which is a contradiction.
 
 solution: Binary search is also used.
-
-
