@@ -125,6 +125,12 @@ Initially all lights are off.
 
 Return the minimum number of lights to be turned ON to light the whole corridor or -1 if the whole corridor cannot be lighted.
 
+### 7. Max Distance
 
+problem: Given an array A of integers, find the maximum of j - i subjected to the constraint of A[i] <= A[j].
+
+principle: If max is given by (i,j), then there cannot be a (x,y) where x>i, y>j and A[x]>=A[i] as then this gives rise to a new max (i,y) which is a contradiction.
+
+solution: Binary search is also used.
 
 
